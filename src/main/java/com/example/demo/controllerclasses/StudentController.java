@@ -30,7 +30,6 @@ public class StudentController
     @PostMapping("/add")
     public StudentResDTO addStudent(@RequestBody Student student) 
     {
-    	
     	Student s=service.addStudent(student);
     	StudentResDTO res=new StudentResDTO();
     	
