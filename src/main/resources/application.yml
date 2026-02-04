@@ -5,13 +5,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  config:
-    import: configserver:http://localhost:8888
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/collegeattendance
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
 server:
   port: 2000
+  
